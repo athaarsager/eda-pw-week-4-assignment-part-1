@@ -91,16 +91,25 @@ function isFirstLetter(letter, string) {
   let newArray = string.split("");
   return newArray[0] === letter ? true : false;
 }
-console.log("Test - should return true", isFirstLetter("E","EDA"));
+console.log("Test - should return true", isFirstLetter("E", "EDA"));
 console.log("Test - should return false", isFirstLetter("y", "Emerging"));
 
 // 9. Function to return the sum of all numbers in an array
 function sumAll(array) {
   let sum = 0;
   // TODO: loop to add items
-
+  for (num of array) {
+    sum += num;
+  }
+  return sum;
   // TODO: return the sum
 }
+
+let numbersArray = [4, 8, 15, 16, 23, 42];
+let otherNumberArray = [-5, 0, 3.141592653589793238462643383279, -900, 116];
+
+console.log("Test - should return 108", sumAll(numbersArray));
+console.log("Test - should return arround -785.858", sumAll(otherNumberArray));
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
