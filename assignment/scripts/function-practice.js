@@ -88,9 +88,11 @@ console.log("Test - should return true", find("thing2", extraArray));
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
-
+  let newArray = string.split("");
+  return newArray[0] === letter ? true : false;
 }
-
+console.log("Test - should return true", isFirstLetter("E","EDA"));
+console.log("Test - should return false", isFirstLetter("y", "Emerging"));
 
 // 9. Function to return the sum of all numbers in an array
 function sumAll(array) {
