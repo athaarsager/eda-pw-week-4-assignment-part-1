@@ -22,7 +22,6 @@ console.log("Test - should say 'Hello, Andrew!'", helloName("Andrew"));
 
 // 3. Function to add two numbers together & return the result
 function addNumbers(firstNumber, secondNumber) {
-
   return firstNumber + secondNumber;
   // return firstNumber + secondNumber;
 }
@@ -30,10 +29,11 @@ function addNumbers(firstNumber, secondNumber) {
 console.log("Test - should return 12", addNumbers(4, 8));
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree() {
-
+function multiplyThree(num1, num2, num3) {
+  return num1 * num2 * num3;
 }
 
+console.log("Test- should return 24", multiplyThree(2, 3, 4));
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
