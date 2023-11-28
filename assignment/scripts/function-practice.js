@@ -145,10 +145,24 @@ console.log("Test - should return [1, 4.378, 7]", allPositive(finalNumberArray))
 const today = new Date();
 const tomorrow = new Date(2023, 10, 29);
 const thisChristmasEve = new Date(2023, 11, 24);
+const oldChristmasEve = new Date(1601, 11, 24);
 
 function timeForMilkAndCookies(date) {
 
+  if (date.getMonth() === 11 && date.getDate() === 24) {
+    console.log("Surrender the cookies and milk or face the wrath of being on the naughty list!")
+    return true;
+  } else {
+    console.log("No one's coming tonight...quick, eath the sweets while you can!")
+    return false;
+  }
 }
+
+console.log("Test - should return true with true string above", timeForMilkAndCookies(thisChristmasEve));
+console.log("Test - should return false with false string above", timeForMilkAndCookies(today));
+console.log("Test - should return true with true string above", timeForMilkAndCookies(oldChristmasEve));
+console.log("Test - should return false again with false string above", timeForMilkAndCookies(tomorrow));
+
 
 // DO NOT MODIFY
 // Used for automated testing
