@@ -130,6 +130,7 @@ function allPositive(array) {
 }
 
 console.log("Test - should return [0, 3.141592653589793238462643383279, 116]", allPositive(otherNumberArray));
+//return result slightly different than console.log due to rounding
 console.log("Test - should return an empty array", allPositive(anotherNumberArray));
 console.log("Test - should return [1, 4.378, 7]", allPositive(finalNumberArray));
 
