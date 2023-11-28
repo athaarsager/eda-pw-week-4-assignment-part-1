@@ -54,18 +54,33 @@ console.log("Test - should return false", isPositive(-9001));
 function getLast(array) {
   return array.pop();
 }
-let fullArray = ["thing1", "thing2", "we don't talk about thing3"];
+const fullArray = ["thing1", "thing2", "we don't talk about thing3"];
 let emptyArray = [];
+let extraArray = ["item1", "thing2", "object3", "some fourth generic noun"];
 
 console.log("Test - should return 'we don't talk about thing3'", getLast(fullArray));
 console.log("Test - should return 'undefined'", getLast(emptyArray));
+console.log("Test - should return 'some fourth generic noun'", getLast(extraArray));
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
-function find(value, array) {
 
-}
+fullArray.push("we don't talk about thing3");
+
+function find(value, array) {
+  let answer = false;
+  for (let item of array) {
+    if (item === value) {
+      answer = true;
+    }//end of if
+  }//end of for
+  return answer;
+}//end of function
+
+console.log("Test - should return true", find("thing2", fullArray));
+console.log("Test - should return false", find("thing4", fullArray));
+console.log("Test - should return true", find("thing2", extraArray));
 
 // ----------------------
 // Stretch Goals
