@@ -114,10 +114,24 @@ console.log("Test - should return arround -785.858", sumAll(otherNumberArray));
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
-function allPositive() {
 
+let anotherNumberArray = [-4, -8, -15, -16, -23, -42];
+let finalNumberArray = [1, -5, 4.378, -9.991, -63, -9000, 7];
+
+function allPositive(array) {
+  let positiveArray = [];
+  //debugger;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] > 0) {
+      positiveArray = positiveArray.concat(array.slice(i, i + 1));
+    }
+  }
+  return positiveArray;
 }
 
+console.log("Test - should return [0, 3.141592653589793238462643383279, 116]", allPositive(otherNumberArray));
+console.log("Test - should return an empty array", allPositive(anotherNumberArray));
+console.log("Test - should return [1, 4.378, 7]", allPositive(finalNumberArray));
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
