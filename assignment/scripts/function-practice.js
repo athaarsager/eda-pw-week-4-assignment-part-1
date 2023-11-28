@@ -142,8 +142,12 @@ console.log("Test - should return [1, 4.378, 7]", allPositive(finalNumberArray))
 //     Create a function that accepts a Date object and returns true if it is Christmas Eve
 //     and false otherwise. So that we know if it's time to set out milk and cookies for Santa!
 
+const today = new Date();
+const tomorrow = new Date(2023, 10, 29);
+const thisChristmasEve = new Date(2023, 11, 24);
+
 function timeForMilkAndCookies(date) {
-  
+
 }
 
 // DO NOT MODIFY
