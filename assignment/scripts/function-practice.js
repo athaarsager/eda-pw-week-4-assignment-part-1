@@ -138,6 +138,13 @@ console.log("Test - should return [1, 4.378, 7]", allPositive(finalNumberArray))
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
 
+//     Problem: Is it Time for Milk and Cookies?
+//     Create a function that accepts a Date object and returns true if it is Christmas Eve
+//     and false otherwise. So that we know if it's time to set out milk and cookies for Santa!
+
+function timeForMilkAndCookies(date) {
+  
+}
 
 // DO NOT MODIFY
 // Used for automated testing
